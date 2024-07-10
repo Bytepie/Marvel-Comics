@@ -52,11 +52,7 @@ watch(
 );
 
 onMounted(async () => {
-    // if (+currentPage.value === 0 || +currentPage.value === 1) {
-    //     await getComics(1);
-    // } else {
     await getComics(+currentPage - 1);
-    // }
 });
 
 </script>
@@ -75,31 +71,3 @@ onMounted(async () => {
         </div>
     </div>
 </template>
-
-
-<!-- <template>
-    <div class="relative">
-        <div v-if="isLoading">
-            <div class="flex items-center justify-center h-screen w-screen">
-                <div class="relative">
-                    <div class="h-24 w-24 rounded-full border-t-8 border-b-8 border-gray-200"></div>
-                    <div
-                        class="absolute top-0 left-0 h-24 w-24 rounded-full border-t-8 border-b-8 border-blue-500 animate-spin">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div v-if="data && !isLoading">
-            <div class="grid grid-flow-row grid-cols-2 gap-8 lg:gap-20 md:grid-cols-4 lg:grid-cols-5 p-2">
-                <div :key="comic.id" v-for="comic in data" class="">
-                    <div class="flex flex-col h-full justify-end gap-2 grow">
-                        <img class="rounded-xl w-full hover:ring"
-                            :src="`${comic.thumbnail.path}.${comic.thumbnail.extension}`" alt="{{ comic.title }}">
-                        <h2>{{ comic.title }}</h2>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</template> -->
