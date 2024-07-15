@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </header>
 
   <div class="flex justify-center items-center mx-auto max-w-screen-2xl py-8 px-2">
-    <RouterView />
+      <RouterView />
   </div>
 </template>
 
